@@ -257,7 +257,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='mt-6 w-1/3 mx-auto flex gap-2'>
+          <div className='mt-3 w-1/3 mx-auto flex gap-2'>
             <button disabled={!account.isConnected && account.isDisconnected && !isApproved} onClick={handleApproveClick} className={'bg-black disabled:opacity-20 w-full hover:bg-white hover:text-black text-white px-6 py-3 rounded text-lg text-semibold transition ' + (isApproved ? 'hidden' : '')}>Approve</button>
             <button disabled={!account.isConnected && account.isDisconnected && isApproved} onClick={handleBuyClick} className={'bg-black  disabled:opacity-20 w-64 hover:bg-white hover:text-black text-white px-6 py-3 rounded text-lg text-semibold transition ' + (!isApproved ? 'hidden' : '')}>Buy</button>
           </div>
