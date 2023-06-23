@@ -264,7 +264,7 @@ export default function Home() {
           <div className='mx-auto text-center mt-4 text-black/50 w- text-sm'>
             RAPID Token contract address: <b>0x228580Db7A5E713755526B49eBec6f68F98cf4b8</b>
 
-            <p className='mt-2'>For this exclusive sale only, 1 RAPID is valued at 0.17 USDT. The price will increase during Private Sale #2 and Public Sale stages.</p>
+            <p className='mt-2'>For this exclusive sale only, 1 RAPID is valued at 0.13 USDT. The price will increase during Private Sale #2 and Public Sale stages.</p>
 
             <br />
             This presale will be open from <b className='text-black'>June 28th to June 28th, 2023.</b>
