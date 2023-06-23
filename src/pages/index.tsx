@@ -3,6 +3,7 @@ import { NumberInput } from 'intl-number-input'
 import { useEffect, useRef, useState } from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount, useContractWrite, useWaitForTransaction } from 'wagmi';
+import Swal from 'sweetalert2';
 
 export default function Home() {
   const account = useAccount();
@@ -102,22 +103,41 @@ export default function Home() {
       return;
     }
 
-    const result = await approveContract.writeAsync({
-      args: [
-        '0x61D7F1db8606Da077a2Fa9757d909F017BDcbC42',
-        BigInt(
-          usdInputEl.getValue().number * 10 ** 18
-        )
-      ],
-    });
+    try {
+      const result = await approveContract.writeAsync({
+        args: [
+          '0x61D7F1db8606Da077a2Fa9757d909F017BDcbC42',
+          BigInt(
+            usdInputEl.getValue().number * 10 ** 18
+          )
+        ],
+      });
 
-    setTimeout(() => {
-      if (result.hash) {
-        setIsApproved(true);
-      } else {
-        setIsApproved(false);
-      }
-    }, 3000)
+      setTimeout(() => {
+        if (result.hash) {
+          setIsApproved(true);
+
+          Swal.fire({
+            title: 'Approved successfully',
+            icon: 'success',
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer: 1500
+          })
+        } else {
+          setIsApproved(false);
+
+          Swal.fire({
+            title: 'Failed',
+            icon: 'error',
+            showCancelButton: false,
+            showConfirmButton: false,
+            timer: 1500
+          })
+        }
+      }, 3000)
+    } catch (e) {
+    }
   }
 
   const buyContract = useContractWrite({
@@ -161,9 +181,21 @@ export default function Home() {
       });
 
       if (result.hash) {
-        alert('Rapid token bought successfully')
+        Swal.fire({
+          title: 'Rapid token bought successfully',
+          icon: 'success',
+          showCancelButton: false,
+          showConfirmButton: false,
+          timer: 1500
+        })
       } else {
-        alert('Failed');
+        Swal.fire({
+          title: 'Failed',
+          icon: 'error',
+          showCancelButton: false,
+          showConfirmButton: false,
+          timer: 1500
+        })
       }
     } catch (e) {
     }
