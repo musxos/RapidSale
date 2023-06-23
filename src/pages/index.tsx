@@ -117,7 +117,7 @@ export default function Home() {
       } else {
         setIsApproved(false);
       }
-    }, 2000)
+    }, 3000)
   }
 
   const buyContract = useContractWrite({
