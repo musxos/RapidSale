@@ -230,7 +230,7 @@ export default function Home() {
         </div>
       </nav>
 
-      <div className='max-w-screen-xl w-full sm:w-2/3 mx-auto flex flex-col z-50'>
+      <div className='max-w-screen-xl w-full sm:h-2/3 mx-auto flex flex-col z-50'>
         <section className='bg-gray-100/50 backdrop-blur-3xl shadow px-8 py-6 rounded my-12 mx-auto max-w-screen-sm w-full'>
           <div>
             <h2 className='text-xl text-semibold'>RAPIDCHAIN Privatesale #1</h2>
