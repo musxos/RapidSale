@@ -230,7 +230,7 @@ export default function Home() {
             <button disabled={!account.isConnected && account.isDisconnected && isApproved} onClick={handleBuyClick} className={'bg-black  disabled:opacity-20 w-64 hover:bg-white hover:text-black text-white px-6 py-3 rounded text-lg text-semibold transition ' + (!isApproved ? 'hidden' : '')}>Buy</button>
           </div>
           <div className='mx-auto text-center mt-4 text-black/50 w- text-sm'>
-            RAPID Token contract address: <b>0xaE882c1b3AaE1Fc64D8dbAc7Bba10633146aA82e</b>
+            RAPID Token contract address: <b>0x228580Db7A5E713755526B49eBec6f68F98cf4b8</b>
 
             <p className='mt-2'>For this exclusive sale only, 1 RAPID is valued at 0.17 USDT. The price will increase during Private Sale #2 and Public Sale stages.</p>
 
