@@ -258,8 +258,8 @@ export default function Home() {
           </div>
 
           <div className='mt-3 w-1/3 mx-auto flex gap-2'>
-            <button disabled={!account.isConnected && account.isDisconnected && !isApproved} onClick={handleApproveClick} className={'bg-black disabled:opacity-20 w-full hover:bg-white hover:text-black text-white px-6 py-3 rounded text-lg text-semibold transition ' + (isApproved ? 'hidden' : '')}>Approve</button>
-            <button disabled={!account.isConnected && account.isDisconnected && isApproved} onClick={handleBuyClick} className={'bg-black  disabled:opacity-20 w-64 hover:bg-white hover:text-black text-white px-6 py-3 rounded text-lg text-semibold transition ' + (!isApproved ? 'hidden' : '')}>Buy</button>
+            <button disabled={!account.isConnected && account.isDisconnected && !isApproved} onClick={handleApproveClick} className={'bg-black disabled:opacity-20 w-full hover:bg-white hover:text-black text-white px-6 py-3 rounded text-md text-semibold transition ' + (isApproved ? 'hidden' : '')}>Approve</button>
+            <button disabled={!account.isConnected && account.isDisconnected && isApproved} onClick={handleBuyClick} className={'bg-black  disabled:opacity-20 w-64 hover:bg-white hover:text-black text-white px-6 py-3 rounded text-md text-semibold transition ' + (!isApproved ? 'hidden' : '')}>Buy</button>
           </div>
           <div className='mx-auto text-center mt-4 text-black/50 w- text-sm'>
             RAPID Token contract address: <b>0x228580Db7A5E713755526B49eBec6f68F98cf4b8</b>
