@@ -231,7 +231,7 @@ export default function Home() {
       </nav>
 
       <div className='max-w-screen-xl w-full sm:h-2/3 mx-auto flex flex-col z-50'>
-        <section className='bg-gray-100/50 backdrop-blur-3xl shadow px-8 py-6 rounded my-12 mx-auto max-w-screen-sm w-full'>
+        <section className='bg-gray-100/50 backdrop-blur-3xl shadow px-8 py-6 rounded my-6 mx-auto max-w-screen-sm w-full'>
           <div>
             <h2 className='text-xl text-semibold'>RAPIDCHAIN Privatesale #1</h2>
             <p className='text-light mt-2 text-sm text-black/60'>To earn a spot on the WhiteList, you must have a minimum of 100 GLI tokens in your BSC wallet. The minimum purchase amount is 50 USDT, and the maximum purchase amount is 2000 USDT.
