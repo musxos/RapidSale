@@ -35,7 +35,7 @@ export default function Home() {
         }
       },
       onInput: (value) => {
-        _rapidTokenEl.setValue((value.number || 50) * 5.9);
+        _rapidTokenEl.setValue((value.number || 50) * 7.7);
       }
     });
 
