@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    html,
+    body {
+        @apply bg-gray-100 overflow-hidden;
+    }
+}
+
+@font-face {
+    font-family: 'Ruberoid Bold';
+    src: url('/fonts/Ruberoid-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ruberoid Regular';
+    src: url('/fonts/Ruberoid-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ruberoid Light';
+    src: url('/fonts/Ruberoid-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ruberoid Medium';
+    src: url('/fonts/Ruberoid-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ruberoid Thin';
+    src: url('/fonts/Ruberoid-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ruberoid ExtraLight';
+    src: url('/fonts/Ruberoid-ExtraLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ruberoid SemiBold';
+    src: url('/fonts/Ruberoid-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ruberoid ExtraBold';
+    src: url('/fonts/Ruberoid-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Ruberoid UltraLight';
+    src: url('/fonts/Ruberoid-UltraLight.otf') format('opentype');
+}
+
+.text-bold {
+    font-family: 'Ruberoid Bold';
+}
+
+.text-regular {
+    font-family: 'Ruberoid Regular';
+}
+
+.text-light {
+    font-family: 'Ruberoid Light';
+}
+
+.text-medium {
+    font-family: 'Ruberoid Medium';
+}
+
+.text-thin {
+    font-family: 'Ruberoid Thin';
+}
+
+.text-extralight {
+    font-family: 'Ruberoid ExtraLight';
+}
+
+.text-semibold {
+    font-family: 'Ruberoid SemiBold';
+}
+
+.text-extrabold {
+    font-family: 'Ruberoid ExtraBold';
+}
+
+.text-ultralight {
+    font-family: 'Ruberoid UltraLight';
+}
+.follower {
+    @apply top-1/2 left-1/2 blur-[180px] opacity-60 absolute aspect-square bg-gradient-to-tr h-[32vmax] from-emerald-500 to-purple-500 rounded-full ;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+  }
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: spin 20s linear infinite;
+}
