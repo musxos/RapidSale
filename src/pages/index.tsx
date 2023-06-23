@@ -106,7 +106,7 @@ export default function Home() {
     try {
       const result = await approveContract.writeAsync({
         args: [
-          '0x61D7F1db8606Da077a2Fa9757d909F017BDcbC42',
+          '0xe72aa31AdbB0Da7C950e2F400B2697d663a4B655',
           BigInt(
             usdInputEl.getValue().number * 10 ** 18
           )
@@ -158,7 +158,7 @@ export default function Home() {
         "type": "function"
       }
     ],
-    address: '0x61D7F1db8606Da077a2Fa9757d909F017BDcbC42',
+    address: '0xe72aa31AdbB0Da7C950e2F400B2697d663a4B655',
     functionName: 'buyTokens',
     mode: ('recklesslyUnprepared' as any),
     value: BigInt(0),
