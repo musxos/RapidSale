@@ -219,6 +219,10 @@ export default function Home() {
                   <a href="https://twitter.com/RapidChain">Twitter</a>
                 </li>
                 <li className="text-sm text-gray-500 hover:text-gray-900">
+                  <a href="https://glitoken.com/gli_lock_ui.html">$GLI Token Lock</a>
+                </li>
+                
+                <li className="text-sm text-gray-500 hover:text-gray-900">
                   <a href="https://t.me/RapidChainOfficial">Telegram</a>
                 </li>
                 <li className="md:block hidden">
