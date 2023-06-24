@@ -162,6 +162,15 @@ export default function Home() {
     value: BigInt(0),
   });
 
+  function copy(text:any) {
+    var dummyTextarea = document.createElement('textarea');
+    dummyTextarea.value = text;
+    document.body.appendChild(dummyTextarea);
+    dummyTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummyTextarea);
+  }
+
   async function handleBuyClick(e: any) {
     e.preventDefault();
 
@@ -320,7 +329,7 @@ export default function Home() {
             </div>
             <div className="mx-auto text-center mt-4 text-black/50 text-sm">
               RAPID Token contract address:{" "}
-              <b>0x228580Db7A5E713755526B49eBec6f68F98cf4b8</b>
+              <b onClick={(e)=> copy('0x228580Db7A5E713755526B49eBec6f68F98cf4b8')}>0x228580Db7A5E713755526B49eBec6f68F98cf4b8</b>
               <p className="mt-2">
                 For this exclusive sale only, 1 RAPID is valued at 0.13 USDT.
                 The price will increase during Private Sale #2 and Public Sale
