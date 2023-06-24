@@ -324,7 +324,7 @@ export default function Home() {
               </p>
               <br />
               This presale will be open from{" "}
-              <b className="text-black">June 28th to June 28th, 2023.</b>
+              <b className="text-black">June 23th to June 28th, 2023.</b>
             </div>
           </section>
         </div>
