@@ -274,7 +274,7 @@ export default function Home() {
                 <input
                   
                   className="px-8 py-4 rounded shadow w-full text-medium outline-emerald-500"
-                  placeholder="USD Amount"
+                  placeholder="min 50 USD"
                   ref={usdInput}
                 ></input>
                 <img
