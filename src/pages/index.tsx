@@ -336,7 +336,7 @@ export default function Home() {
               </button>
             </div>
             <div className="mx-auto text-center mt-4 text-black/50 text-sm">
-             Funded: ${ Math.floor(soldToken * 0.13)}
+             Funded: ${ Math.floor(soldToken * 0.1298)}
             </div>
             <div className="mx-auto text-center mt-4 text-black/50 text-sm">
               RAPID Token contract address:{" "}
