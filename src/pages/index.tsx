@@ -272,7 +272,7 @@ export default function Home() {
             <div className="mt-12 flex flex-col">
               <div className="w-3/4 mx-auto relative">
                 <input
-                  value="50"
+                  
                   className="px-8 py-4 rounded shadow w-full text-medium outline-emerald-500"
                   placeholder="USD Amount"
                   ref={usdInput}
