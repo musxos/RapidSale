@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useContractWrite, useWaitForTransaction } from "wagmi";
 import Swal from "sweetalert2";
+import {ethers} from "ethers";
+import abi from '../assets/ABI.json';
 
 export default function Home() {
   const account = useAccount();
@@ -14,6 +16,21 @@ export default function Home() {
 
   const [rapidTokenEl, setRapidTokenEl] = useState<any>(null);
   const [usdInputEl, setUsdInput] = useState<any>(null);
+  const [soldToken , setSoldToken] = useState<any>(0)
+  useEffect(()=>{
+    const contractAddress = "0xe72aa31AdbB0Da7C950e2F400B2697d663a4B655"
+    const provider = new ethers.providers.JsonRpcProvider("https://thrumming-cool-research.bsc.discover.quiknode.pro/e4f7a81500e57cb5e3df373fd2b9455974236518/")
+    const contract = new ethers.Contract(contractAddress, abi, provider);
+    contract.tokensSold()
+        .then((result: any) => {
+          setSoldToken(result.toNumber())
+            }
+        )
+        .catch((err: string) => {
+          console.error(err);
+        });
+  })
+
 
   useEffect(() => {
     let _rapidTokenEl = new NumberInput({
@@ -317,6 +334,9 @@ export default function Home() {
               >
                 Buy
               </button>
+            </div>
+            <div className="mx-auto text-center mt-4 text-black/50 text-sm">
+             Funded: ${ Math.floor(soldToken * 0.13)}
             </div>
             <div className="mx-auto text-center mt-4 text-black/50 text-sm">
               RAPID Token contract address:{" "}
