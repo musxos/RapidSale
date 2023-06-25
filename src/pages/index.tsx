@@ -17,6 +17,18 @@ export default function Home() {
   const [rapidTokenEl, setRapidTokenEl] = useState<any>(null);
   const [usdInputEl, setUsdInput] = useState<any>(null);
   const [soldToken , setSoldToken] = useState<any>(0)
+  const [address_ , setAddress]=useState('0x228580Db7A5E713755526B49eBec6f68F98cf4b8')
+
+    function copy(text:any) {
+    var dummyTextarea = document.createElement('textarea');
+    dummyTextarea.value = text;
+    document.body.appendChild(dummyTextarea);
+    dummyTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummyTextarea);
+    setAddress('Copied Address!')
+  }
+  
   useEffect(()=>{
     const contractAddress = "0xe72aa31AdbB0Da7C950e2F400B2697d663a4B655"
     const provider = new ethers.providers.JsonRpcProvider("https://thrumming-cool-research.bsc.discover.quiknode.pro/e4f7a81500e57cb5e3df373fd2b9455974236518/")
@@ -340,7 +352,9 @@ export default function Home() {
             </div>
             <div className="mx-auto text-center mt-4 text-black/50 text-sm">
               RAPID Token contract address:{" "}
-              <b>0x228580Db7A5E713755526B49eBec6f68F98cf4b8</b>
+              <a onClick={(e)=> copy('0x228580Db7A5E713755526B49eBec6f68F98cf4b8')}>
+                <b >{address_}</b>
+              </a>
               <p className="mt-2">
                 For this exclusive sale only, 1 RAPID is valued at 0.13 USDT.
                 The price will increase during Private Sale #2 and Public Sale
