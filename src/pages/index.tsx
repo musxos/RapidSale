@@ -273,80 +273,15 @@ export default function Home() {
                 RAPIDCHAIN Privatesale #1
               </h2>
               <p className="text-light mt-2 text-sm text-black/60">
-                To earn a spot on the WhiteList, you must have a minimum of 100
-                GLI tokens in your BSC wallet. The minimum purchase amount is 50
-                USDT, and the maximum purchase amount is 2000 USDT. Once you
-                make a purchase, your RAPID tokens will be sent to your wallet
-                immediately. This transaction is irreversible.
+              Seed Sale has been successfully completed. A total of $69,450.00 USD was Funded.
+                Thanks to all Participants
               </p>
             </div>
 
-            <div className="mt-12 flex flex-col">
-              <div className="w-3/4 mx-auto relative">
-                <input
-                  
-                  className="px-8 py-4 rounded shadow w-full text-medium outline-emerald-500"
-                  placeholder="min 50 USD"
-                  ref={usdInput}
-                ></input>
-                <img
-                  src="/usdt.png"
-                  className="w-8 h-8 absolute right-4 translate-y-1/2 bottom-1/2 text-bold text-xl"
-                />
-              </div>
+   
+              
 
-              <div className="my-4 mx-auto">
-                <div className="h-8 w-8">
-                  <svg
-                    className="fill-black"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M11.9498 7.94975L10.5356 9.36396L8.00079 6.828L8.00004 20H6.00004L6.00079 6.828L3.46451 9.36396L2.05029 7.94975L7.00004 3L11.9498 7.94975ZM21.9498 16.0503L17 21L12.0503 16.0503L13.4645 14.636L16.0008 17.172L16 4H18L18.0008 17.172L20.5356 14.636L21.9498 16.0503Z"></path>
-                  </svg>
-                </div>
-              </div>
-
-              <div className="w-3/4 mx-auto relative">
-                <input
-                  disabled
-                  ref={rapidInput}
-                  className="px-8 py-4 rounded shadow w-full text-medium outline-emerald-500"
-                  placeholder="Rapid Token Amount"
-                ></input>
-                <img
-                  src="/logo.png"
-                  className="w-8 h-8 absolute right-4 translate-y-1/2 bottom-1/2 text-bold text-xl"
-                />
-              </div>
-            </div>
-
-            <div className="mt-3 w-3/4 mx-auto flex gap-2">
-              <button
-                disabled={
-                  !account.isConnected && account.isDisconnected && !isApproved
-                }
-                onClick={handleApproveClick}
-                className={
-                  "bg-black disabled:opacity-20 w-full hover:bg-white hover:text-black text-white px-6 py-3 rounded text-md text-semibold transition " +
-                  (isApproved ? "hidden" : "")
-                }
-              >
-                Approve
-              </button>
-              <button
-                disabled={
-                  !account.isConnected && account.isDisconnected && isApproved
-                }
-                onClick={handleBuyClick}
-                className={
-                  "bg-black  disabled:opacity-20 w-full hover:bg-white hover:text-black text-white px-6 py-3 rounded text-md text-semibold transition " +
-                  (!isApproved ? "hidden" : "")
-                }
-              >
-                Buy
-              </button>
-            </div>
+         
             <div className="mx-auto text-center mt-4 text-black/50 text-sm">
              Funded: ${ Math.floor(soldToken * 0.129870)}
             </div>
