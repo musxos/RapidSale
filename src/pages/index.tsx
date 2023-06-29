@@ -3,9 +3,6 @@ import { NumberInput } from "intl-number-input";
 import { useEffect, useRef, useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useContractWrite, useWaitForTransaction } from "wagmi";
-import Swal from "sweetalert2";
-import {ethers} from "ethers";
-import abi from '../assets/ABI.json';
 
 export default function Home() {
 
