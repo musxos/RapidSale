@@ -65,9 +65,7 @@ export default function Home() {
               
 
          
-            <div className="mx-auto text-center mt-4 text-black/50 text-sm">
-             Funded: ${ Math.floor(soldToken * 0.129870)}
-            </div>
+        
             <div className="mx-auto text-center mt-4 text-black/50 text-sm">
               RAPID Token contract address: 0x228580Db7A5E713755526B49eBec6f68F98cf4b8
              
