@@ -51,7 +51,7 @@ export default function Home() {
         },
       },
       onInput: (value) => {
-        _rapidTokenEl.setValue((value.number || 50) * 7.7);
+        _rapidTokenEl.setValue((value.number) * 5.55);
       },
     });
 
@@ -134,7 +134,7 @@ export default function Home() {
     try {
       const result = await approveContract.writeAsync({
         args: [
-          "0xe72aa31AdbB0Da7C950e2F400B2697d663a4B655",
+          "0x754918F7ca3Bf3B4217961FE128bF25c9CF83422",
           BigInt(usdInputEl.getValue().number * 10 ** 18),
         ],
       });
