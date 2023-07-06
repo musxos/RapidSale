@@ -168,23 +168,25 @@ export default function Home() {
   const buyContract = useContractWrite({
     abi: [
       {
-        inputs: [
-          {
-            internalType: "uint256",
-            name: "totalPrice",
-            type: "uint256",
-          },
-          {
-            internalType: "address",
-            name: "referralAddress",
-            type: "address",
-          },
-        ],
-        name: "buyTokens",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+   "inputs":[
+      {
+         "internalType":"uint256",
+         "name":"totalPrice",
+         "type":"uint256"
       },
+      {
+         "internalType":"address",
+         "name":"referralAddress",
+         "type":"address"
+      }
+   ],
+   "name":"buyTokens",
+   "outputs":[
+      
+   ],
+   "stateMutability":"nonpayable",
+   "type":"function"
+},
     ],
     address: "0x754918F7ca3Bf3B4217961FE128bF25c9CF83422",
     functionName: "buyTokens",
@@ -320,7 +322,7 @@ export default function Home() {
                 </h3>
                 <div className="flex items-center pt-8 text-center justify-center overflow-hidden">
                   <p className="font-semibold truncate whitespace-nowrap group pt-2 relative">
-                    0xb33a0119315E03f8B53b24A688283423557A71b7
+                    0x228580Db7A5E713755526B49eBec6f68F98cf4b8
                     <button className="transition opacity-0 group group-hover:opacity-100 absolute p-1.5 top-1/2 transform -translate-y-1/2 right-0 h-8 w-8 rounded bg-black text-white text-lg">
                       <svg
                         className="fill-white group-focus:hidden block"
