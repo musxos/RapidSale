@@ -294,7 +294,7 @@ export default function Home() {
                   Chain:
                 </h3>
                 <div className="flex items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
-                  BEP20
+                  BSC + ETH + RAPID
                 </div>
               </div>
               <hr />
@@ -365,7 +365,6 @@ export default function Home() {
               <div className="mt-12 flex flex-col">
                 <div className="w-3/4 mx-auto relative">
                   <input
-                    value="50"
                     className="px-8 py-4 rounded shadow w-full text-medium outline-emerald-500"
                     placeholder="USD Amount"
                     ref={usdInput}
