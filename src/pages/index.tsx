@@ -300,7 +300,7 @@ export default function Home() {
               <hr />
               <div className="mb-4 mt-4 relative">
                 <h3 className="text-sm text-black/50 absolute top-0 left-0">
-                  TotalSupply:
+                  Total Supply:
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
                   100M
