@@ -298,10 +298,10 @@ export default function Home() {
               <hr />
               <div className="mb-4 mt-4 relative">
                 <h3 className="text-sm text-black/50 absolute top-0 left-0">
-                  Total:
+                  TotalSupply:
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
-                  4,232,443,213
+                  100M
                 </div>
               </div>
               <hr />
@@ -310,7 +310,7 @@ export default function Home() {
                   Price:
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
-                  $1 = 1 RAPID
+                 1 RAPID = 0.18$
                 </div>
               </div>
               <hr />
@@ -351,14 +351,12 @@ export default function Home() {
             <section className="bg-gray-100/50 backdrop-blur-3xl shadow px-8 py-6 rounded my-12 w-full md:w-3/4 shrink-1 grow-0">
               <div>
                 <h2 className="text-xl text-semibold">
-                  RAPIDCHAIN Privatesale #1
+                  RAPIDCHAIN Privatesale #2 of 2
                 </h2>
                 <p className="text-light mt-2 text-sm text-black/60">
-                  To earn a spot on the WhiteList, you must have a minimum of
-                  100 GLI tokens in your BSC wallet. The minimum purchase amount
-                  is 50 USDT, and the maximum purchase amount is 2000 USDT. Once
-                  you make a purchase, your RAPID tokens will be sent to your
-                  wallet immediately. This transaction is irreversible.
+                  It is the 2nd special sale of RapidChain Main Coin, RAPID. The amount of funds collected in the 1st private sale was 74,600 USDT. 
+                  The minimum purchase amount is 10 USDT and the maximum purchase amount is 5000 USDT. After making a purchase, your RAPIDs will be sent to your wallet immediately. 
+                  This transaction is irreversible.
                 </p>
               </div>
 
@@ -431,16 +429,10 @@ export default function Home() {
                 </button>
               </div>
               <div className="mx-auto text-center mt-4 text-black/50 text-sm">
-                RAPID Token contract address:{" "}
-                <b>0x228580Db7A5E713755526B49eBec6f68F98cf4b8</b>
-                <p className="mt-2">
-                  For this exclusive sale only, 1 RAPID is valued at 0.13 USDT.
-                  The price will increase during Private Sale #2 and Public Sale
-                  stages.
-                </p>
+          
                 <br />
                 This presale will be open from{" "}
-                <b className="text-black">June 28th to June 28th, 2023.</b>
+                <b className="text-black"> Jul 03 to Jul 16, 2023.</b>
               </div>
               <div className="mb-4 mt-4 relative">
                 <h3 className="text-sm text-black/50 absolute top-0 left-0">
@@ -448,7 +440,7 @@ export default function Home() {
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
                   <div className="text-xs text-black/50">
-                    0 / 300.000
+                    0 / 200.000
                   </div>
                   <div className="w-full h-2 rounded-full bg-gray-100">
                     <div className="w-0 h-full rounded-full bg-gradient-to-r from-green-400 to-blue-500"></div>
@@ -459,11 +451,11 @@ export default function Home() {
 
               {isConnected && <div>
                 <h3 className="text-xl text-semibold">
-                  Use your reference code and won RAPID!
+                  Use your reference code and won USDT!
                 </h3>
                 <p className="text-light mt-2 text-sm text-black/60">
                   Share your reference code with your friends and earn 5% of
-                  their purchase amount in RAPID tokens. Your friends will also
+                  their purchase amount in USDT tokens. Your friends will also
                   receive a 5% bonus on their purchase amount.
                 </p>
 
