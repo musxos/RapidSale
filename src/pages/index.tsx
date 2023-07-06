@@ -46,8 +46,8 @@ export default function Home() {
         exportValueAsInteger: true,
         precision: 0,
         valueRange: {
-          min: 50,
-          max: 2000,
+          min: 10,
+          max: 5000,
         },
       },
       onInput: (value) => {
