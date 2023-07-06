@@ -351,7 +351,7 @@ export default function Home() {
                 <div className="flex items-center pt-8 text-center justify-center overflow-hidden">
                   <p className="font-semibold truncate whitespace-nowrap group pt-2 relative">
                     {contractAddress}
-                    <button onClick={e=copy("0x228580Db7A5E713755526B49eBec6f68F98cf4b8")} className="transition opacity-0 group group-hover:opacity-100 absolute p-1.5 top-1/2 transform -translate-y-1/2 right-0 h-8 w-8 rounded bg-black text-white text-lg">
+                    <button onClick={e=>copy("0x228580Db7A5E713755526B49eBec6f68F98cf4b8")} className="transition opacity-0 group group-hover:opacity-100 absolute p-1.5 top-1/2 transform -translate-y-1/2 right-0 h-8 w-8 rounded bg-black text-white text-lg">
                       <svg
                         className="fill-white group-focus:hidden block"
                         xmlns="http://www.w3.org/2000/svg"
