@@ -51,7 +51,7 @@ export default function Home() {
         },
       },
       onInput: (value) => {
-        _rapidTokenEl.setValue((value.number || 10) * 5.55);
+        _rapidTokenEl.setValue((value.number || 0) * 5.55);
       },
     });
 
