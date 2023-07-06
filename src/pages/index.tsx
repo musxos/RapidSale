@@ -186,7 +186,7 @@ export default function Home() {
         type: "function",
       },
     ],
-    address: "0xe72aa31AdbB0Da7C950e2F400B2697d663a4B655",
+    address: "0x754918F7ca3Bf3B4217961FE128bF25c9CF83422",
     functionName: "buyTokens",
     mode: "recklesslyUnprepared" as any,
     value: BigInt(0),
