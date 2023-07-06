@@ -5,10 +5,38 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount, useContractWrite } from "wagmi";
 import Swal from "sweetalert2";
 import { useRouter } from "next/router";
-
+import ABI from "../assets/ABI.json";
+import { ethers } from "ethers";
 export default function Home() {
+
+  const [contractAddress,setContractAddress]=useState("0x228580Db7A5E713755526B49eBec6f68F98cf4b8")
   const [referralCode, setReferralCode] = useState("");
   const [isConnected, setIsConnected] = useState(false);
+  const [soldToken,setSold]=useState(0)
+  function copy(text:any) {
+    var dummyTextarea = document.createElement('textarea');
+    dummyTextarea.value = text;
+    document.body.appendChild(dummyTextarea);
+    dummyTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummyTextarea);
+    setContractAddress('Copied Address!')
+  }
+
+  const provider = new ethers.providers.JsonRpcProvider("https://twilight-magical-fire.bsc.discover.quiknode.pro/2e3a96e617a531b9cf713af9eb2faab8525d95a8/")
+  const contract = new ethers.Contract("0x754918f7ca3bf3b4217961fe128bf25c9cf83422", ABI, provider);
+
+  useEffect(()=>{
+  contract.tokensSold()
+  .then((result: string) => {
+      setSold(Number(result))
+  })
+  .catch((err: string) => {
+    console.error(err);
+  });
+  }
+  ,[])
+
   const account = useAccount({
     onConnect: ({ address }) => {
       setReferralCode(address as string);
@@ -322,8 +350,8 @@ export default function Home() {
                 </h3>
                 <div className="flex items-center pt-8 text-center justify-center overflow-hidden">
                   <p className="font-semibold truncate whitespace-nowrap group pt-2 relative">
-                    0x228580Db7A5E713755526B49eBec6f68F98cf4b8
-                    <button className="transition opacity-0 group group-hover:opacity-100 absolute p-1.5 top-1/2 transform -translate-y-1/2 right-0 h-8 w-8 rounded bg-black text-white text-lg">
+                    {contractAddress}
+                    <button onClick={e=copy("0x228580Db7A5E713755526B49eBec6f68F98cf4b8")} className="transition opacity-0 group group-hover:opacity-100 absolute p-1.5 top-1/2 transform -translate-y-1/2 right-0 h-8 w-8 rounded bg-black text-white text-lg">
                       <svg
                         className="fill-white group-focus:hidden block"
                         xmlns="http://www.w3.org/2000/svg"
@@ -437,7 +465,7 @@ export default function Home() {
               </div>
               <div className="mb-4 mt-4 relative">
                 <h3 className="text-sm text-black/50 absolute top-0 left-0">
-                  Funded:
+                  Funded: ${soldToken*0.18}
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
                   <div className="text-xs text-black/50">
