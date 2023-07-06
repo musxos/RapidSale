@@ -469,7 +469,7 @@ export default function Home() {
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
                   <div className="text-xs text-black/50">
-                    ((soldToken*0.18)/100).toFixed(2) / 200.000
+                    {((soldToken*0.18)/100).toFixed(2)} / 200.000
                   </div>
                   <div className="w-full h-2 rounded-full bg-gray-100">
                     <div className="w-0 h-full rounded-full bg-gradient-to-r from-green-400 to-blue-500"></div>
