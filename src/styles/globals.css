@@ -4,7 +4,6 @@
 
 @layer base {
 
-    html,
     body {
         @apply bg-gray-100 overflow-x-hidden;
     }
