@@ -232,9 +232,8 @@ export default function Home() {
   function handleCopyClick(e: any) {
     e.preventDefault();
 
-    const url = window.location.href;
 
-    const str = url + "?refer=" + referralCode;
+    const str =  referralCode;
 
     navigator.clipboard.writeText(str);
     setIsCopied(true);
@@ -471,7 +470,7 @@ export default function Home() {
                 <div className="mt-4 flex flex-col">
                   <div className="flex md:flex-row flex-col w-3/4 mx-auto relative">
                     <input
-                      value={referralCode}
+                      value={"https://rapid-sale.vercel.app/?refer=" + referralCode}
                       disabled
                       className="px-8 py-4 rounded shadow w-full text-medium outline-emerald-500"
                       placeholder="Reference Code"
