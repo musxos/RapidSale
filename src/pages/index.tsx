@@ -2,11 +2,22 @@
 import { NumberInput } from "intl-number-input";
 import { useEffect, useRef, useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useAccount, useContractWrite, useWaitForTransaction } from "wagmi";
+import { useAccount, useContractWrite } from "wagmi";
 import Swal from "sweetalert2";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const account = useAccount();
+  const [referralCode, setReferralCode] = useState("");
+  const [isConnected, setIsConnected] = useState(false);
+  const account = useAccount({
+    onConnect: ({ address }) => {
+      setReferralCode(address as string);
+      setIsConnected(true);
+    },
+    onDisconnect: () => {
+      setIsConnected(false);
+    }
+  });
   const [isApproved, setIsApproved] = useState(false);
 
   const usdInput = useRef<HTMLInputElement>(null);
@@ -14,6 +25,11 @@ export default function Home() {
 
   const [rapidTokenEl, setRapidTokenEl] = useState<any>(null);
   const [usdInputEl, setUsdInput] = useState<any>(null);
+
+  const router = useRouter();
+  const [refer, setRefer] = useState(
+    "0x711D958a1b60792A7d052C622FaBBff7f86cd67B"
+  );
 
   useEffect(() => {
     let _rapidTokenEl = new NumberInput({
@@ -44,6 +60,15 @@ export default function Home() {
 
     initMouseFollow();
   }, []);
+
+  useEffect(() => {
+    if (router.isReady) {
+      if (router.query.refer) {
+        setRefer(router.query.refer as string);
+      }
+    }
+
+  }, [router.isReady])
 
   function initMouseFollow() {
     const effect = document.getElementById("effect") as HTMLElement;
@@ -149,6 +174,11 @@ export default function Home() {
             name: "totalPrice",
             type: "uint256",
           },
+          {
+            internalType: "address",
+            name: "referralAddress",
+            type: "address",
+          },
         ],
         name: "buyTokens",
         outputs: [],
@@ -171,7 +201,7 @@ export default function Home() {
 
     try {
       const result = await buyContract.writeAsync({
-        args: [BigInt(usdInputEl.getValue().number)],
+        args: [BigInt(usdInputEl.getValue().number), refer],
       });
 
       if (result.hash) {
@@ -192,6 +222,26 @@ export default function Home() {
         });
       }
     } catch (e) {}
+  }
+
+  function handleReferralCodeChange(e: any) {
+    setReferralCode(e.target.value);
+  }
+
+  const [isCopied, setIsCopied] = useState(false);
+  function handleCopyClick(e: any) {
+    e.preventDefault();
+
+    const url = window.location.href;
+
+    const str = url + "?refer=" + referralCode;
+
+    navigator.clipboard.writeText(str);
+    setIsCopied(true);
+
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 1500);
   }
 
   return (
@@ -407,6 +457,38 @@ export default function Home() {
                   <div className="text-xs text-black/50 ml-auto">50%</div>
                 </div>
               </div>
+
+              {isConnected && <div>
+                <h3 className="text-xl text-semibold">
+                  Use your reference code and won RAPID!
+                </h3>
+                <p className="text-light mt-2 text-sm text-black/60">
+                  Share your reference code with your friends and earn 5% of
+                  their purchase amount in RAPID tokens. Your friends will also
+                  receive a 5% bonus on their purchase amount.
+                </p>
+
+                <div className="mt-4 flex flex-col">
+                  <div className="flex md:flex-row flex-col w-3/4 mx-auto relative">
+                    <input
+                      value={referralCode}
+                      disabled
+                      className="px-8 py-4 rounded shadow w-full text-medium outline-emerald-500"
+                      placeholder="Reference Code"
+                      onChange={(e) => setReferralCode(e.target.value)}
+                    ></input>
+
+                    <button
+                      onClick={handleCopyClick}
+                      className="h-full px-4 bg-black py-4 text-white rounded-r text-md font-semibold"
+                    >
+                      {
+                        isCopied ? "Copied" : "Copy"
+                      }
+                    </button>
+                  </div>
+                </div>
+              </div>}
             </section>
           </div>
         </div>
