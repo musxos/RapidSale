@@ -28,7 +28,7 @@ export default function Home() {
 
   const router = useRouter();
   const [refer, setRefer] = useState(
-    "0x711D958a1b60792A7d052C622FaBBff7f86cd67B"
+    "0xc0841C87cbe8F7bB3B6626F99977A88426336070"
   );
 
   useEffect(() => {
