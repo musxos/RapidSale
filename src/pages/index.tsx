@@ -461,11 +461,11 @@ export default function Home() {
           
                 <br />
                 This presale will be open from{" "}
-                <b className="text-black"> Jul 03 to Jul 16, 2023.</b>
+                <b className="text-black"> Jul 06 to Jul 16, 2023.</b>
               </div>
               <div className="mb-4 mt-4 relative">
                 <h3 className="text-sm text-black/50 absolute top-0 left-0">
-                  Funded: ${((soldToken*0.18)/100).toFixed(2) }
+                  Funded: ${((soldToken*0.18)/100  + 13200).toFixed(2) }
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
                   <div className="text-xs text-black/50">
