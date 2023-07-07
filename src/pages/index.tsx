@@ -465,16 +465,16 @@ export default function Home() {
               </div>
               <div className="mb-4 mt-4 relative">
                 <h3 className="text-sm text-black/50 absolute top-0 left-0">
-                  Funded: ${((soldToken*0.18)/100).toFixed(2)}
+                  Funded: ${((soldToken*0.18)/100).toFixed(2) }
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
                   <div className="text-xs text-black/50">
-                    {((soldToken*0.18)/100).toFixed(0)} / 200.000
+                    {((soldToken*0.18)/100 + 13200).toFixed(0)} / 200.000
                   </div>
                   <div className="w-full h-2 rounded-full bg-gray-100">
-                    <div className="w-0 h-full rounded-full bg-gradient-to-r from-green-400 to-blue-500"></div>
+                    <div className="w-10 h-full rounded-full bg-gradient-to-r from-green-400 to-blue-500"></div>
                   </div>
-                  <div className="text-xs text-black/50 ml-auto">0%</div>
+                  <div className="text-xs text-black/50 ml-auto">5%</div>
                 </div>
               </div>
 
