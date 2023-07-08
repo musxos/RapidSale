@@ -261,13 +261,14 @@ export default function Home() {
   const [isCopied, setIsCopied] = useState(false);
   function handleCopyClick(e: any) {
     e.preventDefault();
-
-
     const str =  referralCode;
-
-    navigator.clipboard.writeText("https://rapid-sale.vercel.app/"+"?refer="+str);
+    var dummyTextarea = document.createElement('textarea');
+    dummyTextarea.value = "https://rapid-sale.vercel.app/"+"?refer="+str;
+    document.body.appendChild(dummyTextarea);
+    dummyTextarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummyTextarea);
     setIsCopied(true);
-
     setTimeout(() => {
       setIsCopied(false);
     }, 1500);
