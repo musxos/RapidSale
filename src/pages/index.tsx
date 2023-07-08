@@ -265,7 +265,7 @@ export default function Home() {
 
     const str =  referralCode;
 
-    navigator.clipboard.writeText(str);
+    navigator.clipboard.writeText("https://rapid-sale.vercel.app/"+str);
     setIsCopied(true);
 
     setTimeout(() => {
