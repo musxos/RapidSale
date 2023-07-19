@@ -12,7 +12,7 @@ export default function Home() {
   const [contractAddress,setContractAddress]=useState("0x228580Db7A5E713755526B49eBec6f68F98cf4b8")
   const [referralCode, setReferralCode] = useState("");
   const [isConnected, setIsConnected] = useState(false);
-  const creator = "0x228580Db7A5E713755526B49eBec6f68F98cf4b8";
+  const creator = "0xc0841c87cbe8f7bb3b6626f99977a88426336070";
   const [soldToken,setSold]=useState(0)
   function copy(text:any) {
     var dummyTextarea = document.createElement('textarea');
