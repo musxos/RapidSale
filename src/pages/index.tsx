@@ -232,7 +232,7 @@ export default function Home() {
 
     try {
       const result = await buyContract.writeAsync({
-        args: [BigInt(usdInputEl.getValue().number), creator],
+        args: [BigInt(usdInputEl.getValue().number), refer],
       });
 
       if (result.hash) {
