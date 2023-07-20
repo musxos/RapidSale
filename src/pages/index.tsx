@@ -431,7 +431,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-3 w-3/4 mx-auto flex gap-2">
+              <div className="mt-3 w-3/4 mx-auto flex gap-2 hidden">
                 <button
                   disabled={
                     !account.isConnected &&
@@ -463,7 +463,7 @@ export default function Home() {
           
                 <br />
                 This presale will be open from{" "}
-                <b className="text-black"> Jul 06 to Jul 16, 2023.</b>
+                <b className="text-black"> Finished.</b>
               </div>
               <div className="mb-4 mt-4 relative">
                 <h3 className="text-sm text-black/50 absolute top-0 left-0">
@@ -471,12 +471,12 @@ export default function Home() {
                 </h3>
                 <div className="flex flex-col items-center gap-2 pt-8 text-center justify-center font-semibold text-xl">
                   <div className="text-xs text-black/50">
-                    {((soldToken*0.18)/100 + 13200).toFixed(0)} / 200.000
+                    {((soldToken*0.18)/100 + 13200).toFixed(0)} / 78.000
                   </div>
                   <div className="w-full h-2 rounded-full bg-gray-100">
-                    <div className="w-10 h-full rounded-full bg-gradient-to-r from-green-400 to-blue-500"></div>
+                    <div className="w-full h-full rounded-full bg-gradient-to-r from-green-400 to-blue-500"></div>
                   </div>
-                  <div className="text-xs text-black/50 ml-auto">5%</div>
+                  <div className="text-xs text-black/50 ml-auto">100%</div>
                 </div>
               </div>
 
